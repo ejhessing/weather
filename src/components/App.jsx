@@ -37,7 +37,7 @@ export default React.createClass({
       currentWeather: {
         currently: {
           apparentTemperature:"",
-          summary: ""
+          icon: ""
         }
       }
     }
@@ -56,10 +56,10 @@ export default React.createClass({
               <br/><br/><br/><br/><br/><br/>
               <Temp temp={this.state.currentWeather.currently.apparentTemperature}/>
             </div>
-            <Weather imagePath={this.state.currentWeather.currently.summary}/>
+            <Weather imagePath={this.state.currentWeather.currently.icon}/>
           </div>
           <br/><br/><br/><br/>
-          <Link to={'/tips/' + this.state.currentWeather.currently.summary} className="linkNoDec">What does this mean?!</Link>
+          <Link to={'/tips/' + this.state.currentWeather.currently.icon} className="linkNoDec">What does this mean?!</Link>
         </div>
         <div className="footer">
           <p> All rights reserved sort of </p>
