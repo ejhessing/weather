@@ -29,16 +29,21 @@ export default React.createClass({
   },
   goThroughTips(data, i) {
     if (data.description===this.state.param) {
-      return (<p key={i}> {data.suggestions} </p>)
+      return (<div className="asd"> <p key={i}> {data.suggestions} </p><span className="sexy_line"></span></div>)
     }
   },
   render () {
     return (
-      <div className='info-container'>
-        <p>Info Page</p>
+      <div className='app-container'>
+        <div className="header">
+          <h1>WeatherOrNot</h1>
+        </div>
         <div>
           {(this.state.tips.data.map(this.goThroughTips))}
           <Link to="/">Back</Link>
+        </div>
+        <div className="footer">
+          <p> All rights reserved sort of, lefts too </p>
         </div>
       </div>
     )

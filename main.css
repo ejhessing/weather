@@ -115,3 +115,13 @@ table {
   text-align: left;
   padding: 5px;
 }
+
+.sexy_line{
+  margin: 20px 0px 20px 0px;
+    display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:steelblue;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
