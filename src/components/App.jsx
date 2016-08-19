@@ -48,7 +48,7 @@ export default React.createClass({
       <div className='app-container'>
         <p>Weather</p>
         <div>
-          <Link to="/tips">What does this mean?!</Link>
+          <Link to={'/tips/' + this.state.currentWeather.currently.summary}>What does this mean?!</Link>
           <Location country={this.state.ip.country} city={this.state.ip.city}/>
           <Temp temp={this.state.currentWeather.currently.apparentTemperature}/>
           <Weather imagePath={this.state.currentWeather.currently.summary}/>
