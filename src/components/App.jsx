@@ -59,7 +59,7 @@ export default React.createClass({
             <Weather imagePath={this.state.currentWeather.currently.summary}/>
           </div>
           <br/><br/><br/><br/>
-          <Link className="linkNoDec" to="/tips">What does this mean?!</Link>
+          <Link to={'/tips/' + this.state.currentWeather.currently.summary} className="linkNoDec">What does this mean?!</Link>
         </div>
         <div className="footer">
           <p> All rights reserved sort of </p>

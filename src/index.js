@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (
       <Router history={hashHistory}>
         <Route path='/' component={App} />
-        <Route path='/tips' component={Tips} />
+        <Route path='/tips/:value' component={Tips} />
       </Router>
     ),
     document.getElementById('app')
