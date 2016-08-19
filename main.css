@@ -94,6 +94,7 @@ table {
 }
 
 .linkNoDec {
+  margin: 20px 0px 30px 0px;
   color: white;
   background-color: steelblue;
   text-decoration: none;
@@ -116,12 +117,20 @@ table {
   padding: 5px;
 }
 
+.suggestionHolder {
+  margin: 40px 0px 40px 0px;
+}
+
+.suggestionHolder p {
+  font-size: 2em;
+}
+
 .sexy_line{
-  margin: 20px 0px 20px 0px;
+  margin: 40px 0px 40px 0px;
     display:block;
     border:none;
     color:white;
     height:1px;
     background:steelblue;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(steelblue), to(#fff));
 }

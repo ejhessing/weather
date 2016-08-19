@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
 import request from 'superagent'
+import Weather from './weatherImage'
 
 export default React.createClass({
   componentDidMount () {
@@ -29,7 +30,7 @@ export default React.createClass({
   },
   goThroughTips(data, i) {
     if (data.description===this.state.param) {
-      return (<div className="asd"> <p key={i}> {data.suggestions} </p><span className="sexy_line"></span></div>)
+      return (<div className="suggestionHolder"> <p key={i}> {data.suggestions} </p><span className="sexy_line"></span></div>)
     }
   },
   render () {
@@ -39,8 +40,9 @@ export default React.createClass({
           <h1>WeatherOrNot</h1>
         </div>
         <div>
+        <Weather imagePath="clear-day"/>
           {(this.state.tips.data.map(this.goThroughTips))}
-          <Link to="/">Back</Link>
+          <Link className="linkNoDec" to="/">Back</Link>
         </div>
         <div className="footer">
           <p> All rights reserved sort of, lefts too </p>
