@@ -1,32 +1,45 @@
 import React from 'react'
 import {Link} from 'react-router'
 import request from 'superagent'
-import Sunny from './Sunny'
-import PartlyCloudy from './PartlyCloudy'
-import Cloudy from './Cloudy'
-import Rainy from './Rainy'
-import Thunder from './Thunder'
+import Weather from './weatherImage'
+import Location from './location'
+import Temp from './temp'
 
 export default React.createClass({
   componentDidMount () {
       request
-        .get('http://192.168.20.48:3000')
+        .get('http://192.168.20.48:3000/ip')
         .end((err, res) => {
           if (err) {
             console.error(err.message)
             return
           }
           this.setState({
-            info: res.body
+            ip: res.body
+          })
+        request
+          .get('http://192.168.20.48:3000/weather')
+          .end((err, res) => {
+            if (err) {
+              console.error(err.message)
+              return
+            }
+            this.setState({
+              currentWeather: res.body
+            })
           })
         })
     },
 
   getInitialState () {
     return {
-      ip: [],
-      info: [],
-      currentWeather: 'Sunny'
+      ip: {},
+      currentWeather: {
+        currently: {
+          apparentTemperature:"",
+          summary: ""
+        }
+      }
     }
   },
 
@@ -36,7 +49,10 @@ export default React.createClass({
         <p>Weather</p>
         <div>
           <Link to="/tips">What does this mean?!</Link>
-          <Weather imagePath={this.props.currentWeather}/>
+          <Location country={this.state.ip.country} city={this.state.ip.city}/>
+          <Temp temp={this.state.currentWeather.currently.apparentTemperature}/>
+          <Weather imagePath={this.state.currentWeather.currently.summary}/>
+          {console.log(this.state.currentWeather.currently.apparentTemperature)}
         </div>
       </div>
     )
