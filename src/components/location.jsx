@@ -9,8 +9,9 @@ export default React.createClass({
   render () {
     return (
       <div className="location">
-        <p>{this.props.city}</p>
-        <p>{this.props.country}</p>
+        <h2>{this.props.city},</h2>
+        <br/>
+        <h2>{this.props.country}</h2>
       </div>
     )
   }

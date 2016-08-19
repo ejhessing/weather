@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.header {
+  background-color: steelblue;
+}
+
+.header h1 {
+  color: white;
+  font-size: 4em;
+  text-shadow: 1px 1px 2px blue;
+}
+
+.app-container {
+  background-color: white;
+  text-align: center;
+  color: steelblue;
+  font-family: Arial;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.content {
+  margin: 100px auto;
+  width: 700px;
+  height: 600px;
+}
+
+.location h2 {
+  font-size: 2.5em;
+}
+
+.temp h3 {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.infoHolder {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.linkNoDec {
+  color: white;
+  background-color: steelblue;
+  text-decoration: none;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 2em;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.footer, .page-wrap:after {
+  height: 35px;
+  background: steelblue;
+  color: white;
+  text-align: left;
+  padding: 5px;
+}

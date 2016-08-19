@@ -46,13 +46,23 @@ export default React.createClass({
   render () {
     return (
       <div className='app-container'>
-        <p>Weather</p>
-        <div>
-          <Link to="/tips">What does this mean?!</Link>
-          <Location country={this.state.ip.country} city={this.state.ip.city}/>
-          <Temp temp={this.state.currentWeather.currently.apparentTemperature}/>
-          <Weather imagePath={this.state.currentWeather.currently.summary}/>
-          {console.log(this.state.currentWeather.currently.apparentTemperature)}
+        <div className="header">
+          <h1>WeatherOrNot</h1>
+        </div>
+        <div className="content">
+          <div className="infoHolder">
+            <div className="infoText">
+              <Location country={this.state.ip.country} city={this.state.ip.city}/>
+              <br/><br/><br/><br/><br/><br/>
+              <Temp temp={this.state.currentWeather.currently.apparentTemperature}/>
+            </div>
+            <Weather imagePath={this.state.currentWeather.currently.summary}/>
+          </div>
+          <br/><br/><br/><br/>
+          <Link className="linkNoDec" to="/tips">What does this mean?!</Link>
+        </div>
+        <div className="footer">
+          <p> All rights reserved sort of </p>
         </div>
       </div>
     )

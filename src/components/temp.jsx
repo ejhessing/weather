@@ -10,8 +10,9 @@ export default React.createClass({
   render () {
     return (
       <div className="temp">
-        <p>Celsius: {Math.round(this.getCelsius(this.props.temp), -1)}</p>
-        <p>Fahrenheit: {Math.round(this.props.temp)}</p>
+        <h3>{Math.round(this.getCelsius(this.props.temp), -1)} &#8451;</h3>
+        <br/>
+        <h3>{Math.round(this.props.temp)} &#8457;</h3>
       </div>
     )
   }
