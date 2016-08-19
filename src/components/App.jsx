@@ -1,7 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router'
 import request from 'superagent'
-
+import Sunny from './Sunny'
+import PartlyCloudy from './PartlyCloudy'
+import Cloudy from './Cloudy'
+import Rainy from './Rainy'
+import Thunder from './Thunder'
 
 export default React.createClass({
   componentDidMount () {
@@ -21,15 +25,18 @@ export default React.createClass({
   getInitialState () {
     return {
       ip: [],
-      info: [] }
+      info: [],
+      currentWeather: 'Sunny'
+    }
   },
+
   render () {
     return (
       <div className='app-container'>
         <p>Weather</p>
         <div>
           <Link to="/tips">What does this mean?!</Link>
-
+          <Weather imagePath={this.props.currentWeather}/>
         </div>
       </div>
     )
